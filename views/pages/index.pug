@@ -1,0 +1,154 @@
+extends ../layout.pug
+
+block content
+  section.presentation
+    h2.h-hidden Presentation
+    div(data-ride="carousel")#js-presentation__carousel.carousel.slide
+      ol.carousel-indicators
+        li(data-target="#js-presentation__carousel", data-slide-to="0").presentation__carouselIndicator.active
+        li(data-target="#js-presentation__carousel", data-slide-to="1").presentation__carouselIndicator
+        li(data-target="#js-presentation__carousel", data-slide-to="2").presentation__carouselIndicator
+      .carousel-inner
+        .item.active
+          .presentation__slide
+            h3.presentation__slideCaption Use information technology to meet your business objectives
+            a(href="#").presentation__slideReadMore Read more
+
+        .item
+          .presentation__slide
+            h3.presentation__slideCaption Networking database management. Application development.
+            a(href="#").presentation__slideReadMore Read more
+
+        .item
+          .presentation__slide
+            h3.presentation__slideCaption What we can do for you throw information technology consulting?
+            a(href="#").presentation__slideReadMore Read more
+      a(href="#js-presentation__carousel", data-slide="prev").left.carousel-control
+        span.glyphicon.glyphicon-chevron-left
+        span.sr-only Previous
+      a(href="#js-presentation__carousel", data-slide="next").right.carousel-control
+        span.glyphicon.glyphicon-chevron-right
+        span.sr-only Next
+
+  section.services
+    h2.h-hidden Services
+    .services__container
+      ul.services__servicesList
+        li.services__service
+          include ../svg/world.pug
+          h3 Web programming
+          p.services__serviceInfo This often involves a higher degree of interactivity requiring the use of client-side languages such as JavaScript.
+          a(href="#").services__serviceReadMore Read more
+        li.services__service
+          include ../svg/keyboard.pug
+          h3 Logo and corporate identity
+          p.services__serviceInfo Explore our selection of logo design and branding projects in which each message is meaningful and lasting.
+          a(href="#").services__serviceReadMore Read more
+        li.services__service
+          include ../svg/lock.pug
+          h3 Web design &amp; development
+          p.services__serviceInfo  We create websites your customers will love, including innovative and powerful online tools like complex apps and custom e-business.
+          a(href="#").services__serviceReadMore Read more
+
+  .divider-vertical
+
+  section.aboutUs
+    h2.h-hidden About us
+    .aboutUs__container
+      header.aboutUs__header
+        h3.aboutUs__title Need IT solutions?
+        h4.aboutUs__slogan Leading information service provider
+      p.aboutUs__text We are a friendly IT company providing all sizes of organization with leading-edge technology solutions. We were formed with the aim of assisting organizations in using modern technology with a close relationship and continual personal interaction between our staff and the client.
+        br
+        |Effective IT Solutions has been providing outsourced desktop and network management support since 2001 and currently supports a number of clients across Londo. Our customers operate in many industry sectors including law, retail, accounting, sales, banking and corporate.
+
+      div(data-ride="carousel")#js-aboutUs__carousel.carousel.slide
+        ol.carousel-indicators
+          li(data-target="#js-aboutUs__carousel", data-slide-to="0").aboutUs__carouselIndicator.active
+          li(data-target="#js-aboutUs__carousel", data-slide-to="1").aboutUs__carouselIndicator
+          li(data-target="#js-aboutUs__carousel", data-slide-to="2").aboutUs__carouselIndicator
+          li(data-target="#js-aboutUs__carousel", data-slide-to="3").aboutUs__carouselIndicator
+
+        .carousel-inner
+          .item.active
+            .slide
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText We are a digital design agency and we are all about discovering new designs and approaches. We have a strong believe that a powerful web design can make any business a success.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText Our standard support contract gives the customer a guaranteed time that Effective IT Solutions will respond to a request for support.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+          .item
+            .slide
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText We are a digital design agency and we are all about discovering new designs and approaches. We have a strong believe that a powerful web design can make any business a success.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText Our standard support contract gives the customer a guaranteed time that Effective IT Solutions will respond to a request for support.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+          .item
+            .slide
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText We are a digital design agency and we are all about discovering new designs and approaches. We have a strong believe that a powerful web design can make any business a success.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText Our standard support contract gives the customer a guaranteed time that Effective IT Solutions will respond to a request for support.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+          .item
+            .slide
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText We are a digital design agency and we are all about discovering new designs and approaches. We have a strong believe that a powerful web design can make any business a success.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+              .aboutUs__slideWrapper
+                .aboutUs__slidePicture
+                p.aboutUs__slideText Our standard support contract gives the customer a guaranteed time that Effective IT Solutions will respond to a request for support.
+                p.aboutUs__slideButton: a(href="#").aboutUs__slideButtonNext: i(aria-hidden="true").nextIcon
+
+  section#js-stats.stats
+    h2.h-hidden Stats
+    .stats__container
+      .stats__group
+        .stats__row
+          .stats__item
+            .stats__wrapper
+              p#js-successful-projects.stats__number 0
+              p successful projects
+          .stats__item
+            .stats__wrapper
+              p#js-happy-clients.stats__number 0
+              p happy clients
+      .stats__group
+        .stats__row
+          .stats__item
+            .stats__wrapper
+              p#js-stats-services.stats__number 0
+              p new services every year
+          .stats__item
+            .stats__wrapper
+              p.stats__number
+                span#js-technical-support-hours 0
+                |/
+                span#js-technical-support-days 0
+              p technical support
+
+  .divider-vertical
+
+  section.testimonials
+    .testimonials__container
+      h2.testimonials__title Testimonials:
+      ul.testimonials__list
+        li.testimonials__testimony: p: q.testimonials__quote Wow, I'm so happy with your service. You managed to exceed my expectations! You guys are very efficient and I will refer more people to your company!
+          span.testimonials__author Richard Tompson.
+        li.testimonials__testimony: p: q.testimonials__quote I would just like to say thank you for your prompt and effective service, for your friendly and professional support staff! I will recommend your expert company to all my friends.
+          span.testimonials__author John Nelson.
+        li.testimonials__testimony: p: q.testimonials__quote Thank you very much for your rapid response. It's of no doubt that your company is worth admiring! I have experienced the fastest support ever. Thank you a thousand times!
+          span.testimonials__author Sara Green.
+
+  include ../components/Map.pug

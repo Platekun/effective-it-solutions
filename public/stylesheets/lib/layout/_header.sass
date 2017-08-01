@@ -1,0 +1,49 @@
+.effectiveHeader
+  background-color: $white
+  box-shadow: 0 2px 0.5em $gray
+  padding: 0.3em 1em
+  position: fixed
+  width: 100%
+  z-index: 10
+  @include bp-md()
+    background-color: transparent
+    background-position: cover
+    box-shadow: none
+    height: 50vh
+    position: absolute
+
+  &__control
+    background: none
+    border: none
+    bottom: 10px
+    display: inline-block
+    font-size: 0.8em
+    position: relative
+    margin-right: 0.5em
+    @include bp-md()
+      display: none
+
+  &__logo
+    background-image: url("../images/logo.png")
+    background-position: center
+    background-size: cover
+    display: inline-block
+    height: 48px
+    overflow: hidden
+    text-indent: 100%
+    white-space: nowrap
+    width: 170px
+    @include bp-md()
+      display: block
+      height: 84px
+      margin: 0 auto
+      width: 298px
+
+  &--disabledBg
+    @include bp-md()
+      top: 3em
+
+  &--activeBg
+    @include bp-md()
+      background-image: url("https://livedemo00.template-help.com/wt_58732/images/index-02.jpg")
+      padding-top: 3em

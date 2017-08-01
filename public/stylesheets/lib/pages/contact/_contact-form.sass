@@ -1,0 +1,38 @@
+.contactForm
+  position: relative
+  padding: 1em
+  @make-row()
+
+  &__title
+    border: none
+    font-family: Montserrat
+    font-size: 2.5em
+    margin-bottom: 1em
+    text-align: center
+
+  .form-group
+    @include make-xs-column(12)
+    @include make-lg-column(4)
+    max-width: 40%
+
+  .form-control
+    border-radius: 0
+    margin: 0 auto
+    padding: 1.5em
+    &::placeholder
+      color: $black
+      @include transition(color, ease, 0.3s)
+    &:focus
+      border-color: $gray;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      &::placeholder
+        color: $white
+
+  &__message
+    height: 40vh !important
+
+
+  &__buttonContainer
+    display: inline-block
+    @include center-horizontal()

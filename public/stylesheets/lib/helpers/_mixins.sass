@@ -1,0 +1,54 @@
+@mixin carousel__bg($url)
+  background: url($url)
+  background-position: center
+  background-size: cover
+
+@mixin center()
+  left: 50%
+  position: absolute
+  top: 50%
+  transform: translate(-50%, -50%)
+
+@mixin center-vertical()
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+@mixin center-horizontal()
+  left: 50%
+  position: absolute
+  transform: translateX(-50%)
+
+@mixin vertical-divider($ft: "1em")
+  content: "|"
+  display: block
+  font-size: #{$ft}
+
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+@mixin transform($transforms)
+  -webkit-transform: $transforms
+  -moz-transform: $transforms
+  -ms-transform: $transforms
+  transform: $transforms
+
+@mixin bp-xs()
+  @media #{$xs-screen}
+    @content
+
+@mixin bp-sm()
+  @media #{$sm-screen}
+    @content
+
+@mixin bp-md()
+  @media #{$md-screen}
+    @content
+
+@mixin bp-lg()
+  @media #{$lg-screen}
+    @content

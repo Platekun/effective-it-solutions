@@ -1,0 +1,11 @@
+doctype html
+html
+  include ./components/Head.pug
+  body
+    include ./components/Header.pug
+    main
+      block content
+    include ./components/Footer.pug
+    script(src="javascripts/jquery.min.js")
+    script(src="javascripts/bootstrap/bootstrap.min.js")
+    script(src="javascripts/app.js")

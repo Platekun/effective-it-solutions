@@ -1,0 +1,57 @@
+.services
+  font-size: 1.05em
+  margin: 0
+  padding: 0
+  @include make-row()
+
+  &__container
+    @include make-xs-column(12)
+
+  &__servicesList
+    padding: 0
+    text-align: center
+    @include make-row()
+    @include bp-lg()
+      margin: 0 auto
+      width: 85%
+
+  &__service
+    list-style-type: none
+    padding: 1.5em 3em
+    transition: background-color ease 0.5s
+    @include transition(background-color, ease, 0.5s)
+    @include make-xs-column(12)
+    @include make-sm-column(6)
+    @include make-lg-column(4)
+    &:hover
+      background-color: $primary-color
+    &:last-child
+      @include make-xs-column(12)
+      @include make-lg-column(4)
+      @include make-lg-column-offset(0)
+    &:hover *
+      color: $white
+      fill: $white
+
+    &#{Info}
+      color: $gray
+
+    &#{ReadMore}
+      color: $primary-text-color
+      display: block
+      font-weight: bold
+      margin-top: 1.5em
+      text-transform: uppercase
+      &:hover
+        text-decoration: none
+
+      &:after
+        background-color: $white
+        content: ""
+        display: block
+        height: 1px
+        margin: 0 auto
+        width: 0
+        @include transition(width, ease, 0.5s)
+      &:hover:after
+        width: 6em

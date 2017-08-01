@@ -1,0 +1,39 @@
+extends ../layout.pug
+
+block content
+  section
+    ol.breadcrumb
+      li: a(href="/").breadcrumb__item Home
+      li: a(href="/contact").breadcrumb__current Contact
+
+    include ../components/Map.pug
+    h2 Contact information
+    div
+      p Address:
+      address The Company Name Inc. 9870 St Vincent Place, Glasgow, DC 45
+    div
+      p Phones:
+      ul
+        li: a(href="tel:+180023457892") 800-2345-7892
+        li: a(href="tel:+180023457893") 800-2345-7893
+    div
+      p Email:
+      a(href="mailto:info@demolink.org?subject=Feedback&body=Message") info@demolink.org
+
+    form.contactForm
+      legend.contactForm__title Contact us
+      fieldset.form-group
+        label(for="name").sr-only Name:
+        input(type="text", id="name" placeholder="Name:*").form-control
+      fieldset.form-group
+        label(for="email").sr-only E-Mail:
+        input(type="email", id="email", placeholder="E-Mail:*").form-control
+      fieldset.form-group
+        label(for="phone").sr-only Phone:
+        input(type="text", id="phone", placeholder="Phone:*").form-control
+      fieldset.form-group
+        label(for="message").sr-only Message:
+        textarea(name="message", id="message", placeholder="Message:*").form-control.contactForm__message
+      div.contactForm__buttonContainer
+        input(type="submit", value="send").primary-btn
+        button.primary-btn-inverted reset

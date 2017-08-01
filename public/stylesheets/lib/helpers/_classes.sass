@@ -1,0 +1,70 @@
+.divider-vertical
+  background-color: $black
+  height: 6em
+  margin: 0.5em auto
+  width: 0.3em
+  z-index: 10
+  @include transform(rotate(180deg))
+
+.h-hidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.breadcrumb
+  background-color: $thumbnail
+  font-size: 1.5em
+  margin: 3em auto
+  text-align: center
+
+  &__current
+    color: $primary-text-color
+    @include transition(color, ease, 0.5s)
+
+    &:hover
+      color: $primary-color
+      text-decoration: none
+
+  &__item
+    color: $primary-color
+    @include transition(color, ease, 0.5)
+
+    &:hover
+      color: $primary-text-color
+      text-decoration: none
+
+.map
+  height: 60vh
+
+%effective-btn
+  background: none
+  border: none
+  font-size: 1.4em
+  margin: 0
+  padding: 0.5em 1em
+  text-align: center
+  text-transform: uppercase
+  @include transition(color, ease, 0.5s)
+
+.primary-btn
+  @extend %effective-btn
+  color: $primary-color
+  &:hover
+    color: $black
+
+.primary-btn-inverted
+  @extend %effective-btn
+  color: $black
+  &:hover
+    color: $primary-color
+
+.nextIcon
+  color: inherit
+  @extend .fa
+  @extend .fa-arrow-right
+  @extend .fa-2x

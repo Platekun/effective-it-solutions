@@ -1,0 +1,13 @@
+if isHome
+  header.effectiveHeader.effectiveHeader--disabledBg
+    include ./NavBar.pug
+    h1
+      button#js-navDrawerControl.effectiveHeader__control: span(aria-hidden="true").glyphicon.glyphicon-menu-hamburger
+      span.effectiveHeader__logo Effective IT Solutions
+else
+  header.effectiveHeader.effectiveHeader--activeBg
+    include ./NavBar.pug
+    h1
+      button#js-navDrawerControl.effectiveHeader__control: span(aria-hidden="true").glyphicon.glyphicon-menu-hamburger
+      span.effectiveHeader__logo Effective IT Solutions
+include ./NavigationDrawer.pug

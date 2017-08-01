@@ -1,0 +1,92 @@
+.presentation
+  margin: 0
+  padding: 0
+  @include make-row()
+
+  .carousel
+    height: 100vh
+    @include bp-md()
+      height: 120vh
+
+  .carousel-indicators
+    @include bp-md()
+      display: none
+
+  &__carouselIndicator
+    background-color: $faded-black !important
+    border: none !important
+    height: 1.5em !important
+    margin: 1px 0.5em !important
+    width: 1.5em !important
+    @include transition(background-color, ease-in-out, 0.5s)
+    &:hover
+      background-color: $primary-color !important
+
+  &__carouselIndicator.active
+    background-color: $primary-color !important
+    height: 1.5em !important
+    margin: 1px 0.5em !important
+    width: 1.5em !important
+
+  .carousel-inner
+    height: 100%
+
+  .item
+    height: 100%
+    text-align: center
+    &:nth-child(1)
+      @include carousel__bg("../images/index-01.jpg")
+
+    &:nth-child(2)
+      @include carousel__bg("../images/index-02.jpg")
+
+    &:nth-child(3)
+      @include carousel__bg("../images/index-03.jpg")
+
+  &__slide
+    @include center()
+    @include bp-md()
+      top: 60%
+      width: 70%
+    &#{Caption}
+      font-size: 3.5em
+      @include bp-md()
+        font-size: 6em
+    &#{ReadMore}
+        display: block
+        font-size: 2em
+        text-transform: lowercase
+        color: $primary-color
+        cursor: pointer
+        @include transition(color, ease, 0.5s)
+        &:hover
+          color: $primary-color-dark
+          text-decoration: none
+        &:before
+          content: "|"
+          display: block
+          font-size: 1.3em
+        @include bp-md()
+          position: relative
+          top: 3em
+          font-size: 3em
+          &:after
+              @include vertical-divider("1.3em")
+
+  .carousel-control
+    background-color: $white
+    background-image: none
+    color: $black
+    cursor: pointer
+    display: none
+    height: 5em
+    opacity: 1
+    top: 50%
+    @include transform(translateY(-50%))
+    @include transition(background-color, ease, 0.5s)
+    @include transition(color, ease, 0.5s)
+    &:hover
+      background-color: $black
+      color: $white
+    @include bp-md()
+      display: block

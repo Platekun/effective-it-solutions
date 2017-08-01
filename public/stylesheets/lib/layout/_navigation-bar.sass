@@ -1,0 +1,25 @@
+.navBar
+  display: none
+  font-weight: bold
+  @include bp-md()
+    display: block
+
+  &__links
+    list-style-type: none
+    margin: 0
+    text-align: center
+
+  &__item
+    display: inline-block
+    font-size: 1.2em
+    margin: 0 1.3em
+    &--active
+      border: 5px solid $black
+      padding: 0.3em 1.5em
+
+  &__link
+    color: $primary-text-color
+
+    &:hover
+      color: $primary-text-color
+      text-decoration: none
